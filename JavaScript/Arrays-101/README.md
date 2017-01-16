@@ -144,7 +144,9 @@ An easy explanation of these methods are simply iterate over an array. This iter
 ForEach executes a provided function once for each element. [More Info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) Let's say you want to know what element is in each index and what the corresponding index is for current element.
 
 ```javascript
-	
+	characters.forEach(function(character, i) {
+	  console.log(character + ' is at index ' + i);
+	});
 ```
 
 ##### Map
