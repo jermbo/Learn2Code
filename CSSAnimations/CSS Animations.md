@@ -1,6 +1,8 @@
 # CSS Animations
 
-CSS Animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS Animation and as set of keyframes that indicate the start nd end states of the animation's style, as well as possible intermediate way points. [Source](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) 
+CSS Animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS Animation and as set of @keyframes that indicate the start nd end states of the animation's style, as well as possible intermediate way points. [Source](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) 
+
+In this series we are going to learn about the what, where, when, and why of animation. This section is all about the what and where. We are going to learn the basics necessary to start animating in CSS. We will create some examples that will demonstrate the fundamentals and work our way up to practical examples. 
 
 Before we can get into the details about how to animate, there are a few prerequisites that you need to have an understanding of. We will cover terms to know, what items can be animated, what types of animations do we have at our disposal, and how animations are triggered.  
 
@@ -123,3 +125,198 @@ Let's see a real example and break everything down. [CodePen](https://codepen.io
 }
 ```
 
+## Example time
+
+Now that we have the prerequisites down we can move onto applying the knowledge to examples. 
+
+### Starting off easy
+
+Let's start with something easy. On hover, the box should grow in width and height. *Make sure you have a element with a class of box in the html*
+
+```CSS
+.box{
+  background: cyan;
+  width: 100px;
+  height: 100px;
+  transition: height 0.5s ease;
+}
+.box:hover{
+  height: 250px;
+}
+```
+
+Now, let's animate its width as well. 
+
+```CSS
+.box{
+  background: cyan;
+  width: 100px;
+  height: 100px;
+  transition: height 0.5s ease, width 1.5s ease-in;
+}
+.box:hover{
+  width: 25%;
+  height: 250px;
+}
+```
+
+Maybe you want to rotate it, because... you can.
+
+```CSS
+.box{
+  background: cyan;
+  width: 100px;
+  height: 100px;
+  transition: height 0.5s ease-out, width 0.75s ease-in, transform 0.25s ease;
+}
+.box:hover{
+  width: 125%;
+  height: 250px;
+  transform: rotate(225deg);
+}
+```
+
+I suggest you play around with the different properties, speeds, and eases to see what you can do. 
+
+These examples are cool, but the are not really practical. Let's move onto something a little more useful.
+
+### Somethin a little more useful
+
+Button hovers are an easy win when it comes to user experience. Just a subtle animation from one color to the other makes the site feel better. Let's look at what it would take to do that. 
+
+```CSS
+.btn{
+  background: #f5f5f5;
+  color: cornflowerblue;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.btn:hover{
+  background: cornflowerblue;
+  color: #f5f5f5;
+}
+```
+
+That's pretty! Maybe we can add some box-shadow to help lift it off the page. 
+
+```CSS
+.btn{
+  background: #f5f5f5;
+  color: cornflowerblue;
+  transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+.btn:hover{
+  background: cornflowerblue;
+  color: #f5f5f5;
+  box-shadow: 0 10px 4px -7px rgba(0,0,0,0.75);
+}
+```
+
+Take the transition property off the `.btn` element. See what that looks like with out it. The transition makes it a much better experience. 
+
+Buttons are cool, but what about something a little more complicated?
+
+### Something a little more complicated
+
+On hover of an image, the image should dim in opacity, convert to gray scale, have a highlight animate from left to right, and title should fade in from the top.  That sounds like a lot, so lets break it done into little segments. First let's create the markup.
+
+```HTML
+<figure class="overlay">
+  <img src="http://placecage.com/gif/400/150" alt=""/>
+  <figcaption>
+    <h3><a href="#">Place Cage</a></h3>
+  </figcaption>
+</figure>
+```
+
+Now, let's set up our initial state in CSS.
+
+```CSS
+.overlay {
+  background-color: #045e78;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+
+.overlay:after {
+  background-color: white;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  content: '';
+  left: -75%;
+  position: absolute;
+  width: 25%;
+  box-shadow: 0 0 100px white;
+  transform: skew(-60deg);
+  transition: all 0.6s ease;
+}
+
+.overlay img {
+  vertical-align: top;
+  width: 100%;
+}
+
+.overlay figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  line-height: 1em;
+  opacity: 0;
+}
+
+.overlay h3 {
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.overlay a{
+  color: white;
+}
+```
+
+Next, we animate it.
+
+```CSS
+.overlay:hover img {
+  opacity: 0.24;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.overlay:hover:after {
+  left: 200%;
+}
+
+.overlay:hover figcaption {
+  opacity: 1;
+}
+
+.overlay:hover h3{
+  bottom: 10px;
+}
+```
+
+Notice we have to trigger hover and then animate other elements. We will go more in depth with this in future lectures. 
+
+Cool resource for inspiration and markup required. [LittleSnippets.net](http://littlesnippets.net/)
+
+## Conclusion
+
+Animation is all about experimentation. Everything in these examples are mean to be tweaked with. The point is to make the animation to enhance you user experience. If it doesn't feel "right" to you, chances are your users are going to be off put by it as well. Tweak everything until its just right. 
