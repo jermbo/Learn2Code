@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400,600");
+body {
+  background: #353535;
+  color: #f9f9f9;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: light;
+  letter-spacing: 2px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+.box {
+  background: cyan;
+  width: 100%;
+  height: 100px;
+}
+
+.heightjump {
+  -webkit-transition: height 0.5s ease-out, width 0.75s ease-in, -webkit-transform 0.25s ease;
+  transition: height 0.5s ease-out, width 0.75s ease-in, -webkit-transform 0.25s ease;
+  transition: height 0.5s ease-out, width 0.75s ease-in, transform 0.25s ease;
+}
+.heightjump:hover {
+  width: 125%;
+  height: 250px;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.btn {
+  background: #f5f5f5;
+  color: cornflowerblue;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  -webkit-transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+  transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.btn:hover {
+  background: cornflowerblue;
+  color: #f5f5f5;
+  box-shadow: 0 10px 4px -7px rgba(0, 0, 0, 0.75);
+}
+
+.overlay {
+  background-color: #045e78;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.overlay:after {
+  background-color: white;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  content: '';
+  left: -75%;
+  position: absolute;
+  width: 25%;
+  box-shadow: 0 0 100px white;
+  -webkit-transform: skew(-60deg);
+          transform: skew(-60deg);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.overlay img {
+  vertical-align: top;
+  width: 100%;
+}
+
+.overlay figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  line-height: 1em;
+  opacity: 0;
+}
+
+.overlay h3 {
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.overlay a {
+  color: white;
+}
+
+.overlay:hover img {
+  opacity: 0.24;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.overlay:hover:after {
+  left: 200%;
+}
+
+.overlay:hover figcaption {
+  opacity: 1;
+}
+
+.overlay:hover h3 {
+  bottom: 10px;
+}
