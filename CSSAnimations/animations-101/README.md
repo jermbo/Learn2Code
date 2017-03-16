@@ -1,8 +1,6 @@
-# CSS Animations
+# Animation 101
 
-CSS Animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS Animation and as set of @keyframes that indicate the start nd end states of the animation's style, as well as possible intermediate way points. [Source](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) 
-
-In this series we are going to learn about the what, where, when, and why of animation. This section is all about the what and where. We are going to learn the basics necessary to start animating in CSS. We will create some examples that will demonstrate the fundamentals and work our way up to practical examples. 
+This section is all about the what and where. We are going to learn the basics necessary to start animating in CSS. We will create some examples that will demonstrate the fundamentals and work our way up to practical examples. 
 
 Before we can get into the details about how to animate, there are a few prerequisites that you need to have an understanding of. We will cover terms to know, what items can be animated, what types of animations do we have at our disposal, and how animations are triggered.  
 
