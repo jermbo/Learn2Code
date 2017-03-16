@@ -61,3 +61,65 @@ The `transition` property is what is triggering the animation and that takes min
 }
 ```
 
+#### Animation and @Keyframes
+
+Animation and @Keyframes go hand in hand. The `animation` property is applied to your element. Then the `@keyframes` are defined outside a selector and hold the values of what you want to animate. 
+
+Here is a break down of the CSS syntax for animate.
+
+```CSS
+.element{
+  animation: [name] [duration] [ease] [delay] [iteration] [direction] [fill-mode] [play-state];
+}
+```
+
+Here is a break down of the CSS syntax for `@keyframes`.
+
+```
+@keyframes [name]{
+  from{
+    [styles];
+  }
+  to{
+    [styles];
+  }
+}
+```
+
+Let's see a real example and break everything down. [CodePen](https://codepen.io/pbCodeSchool/pen/bqYVoa)
+
+```CSS
+.box{
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background: cyan;
+  animation: superanimation 2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes superanimation{
+  from{
+    height: 200px;
+    background: cyan;
+  }
+  to{
+    height: 500px;
+    background: magenta;
+  }
+}
+/* Or */
+@keyframes superanimation{
+  0%, 100%{
+    height: 200px;
+    background: cyan;
+  }
+  25%, 75%{
+    width: 50%;
+    height: 500px;
+    background: magenta;
+    transform: rotate(720deg) translate(50%, 50%);
+  }
+}
+```
+
