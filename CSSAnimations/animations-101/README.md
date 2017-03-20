@@ -1,6 +1,6 @@
 # Animation 101
 
-This section is all about the what and where. We are going to learn the basics necessary to start animating in CSS. We will create some examples that will demonstrate the fundamentals and work our way up to practical examples. 
+This section is all about the what and where. We are going to learn the basics necessary to start animating in CSS. We will create some examples that will demonstrate the fundamentals and work our way up to practical examples.
 
 Before we can get into the details about how to animate, there are a few prerequisites that you need to have an understanding of. We will cover terms to know, what items can be animated, what types of animations do we have at our disposal, and how animations are triggered.  
 
@@ -10,28 +10,26 @@ Before we can get into the details about how to animate, there are a few prerequ
 
 **an-i-ma-tion** /ˌanəˈmāSH(ə)n/ ***noun*** : [source](https://www.google.com/search?q=what+is+animation)
 
-1. the state of being full of life or vigor; liveliness. 
-2. the technique of photographing successive drawings or position of puppets or models to create an illusion of movement when the movie is show in sequence. 
+1. the state of being full of life or vigor; liveliness.
+2. the technique of photographing successive drawings or position of puppets or models to create an illusion of movement when the movie is show in sequence.
 
-We are going to focus on the second definition, more specifically "the illusion of movement". 
+We are going to focus on the second definition, more specifically "the illusion of movement".
 
 ### What can be animated?
 
 It is safe to state that anything you want to animate is able to be animated. Though there are exceptions to the rules, and those exceptions are : display || font-family || position || text-align || visibility. Out side of that, everything else can be animated. *
 
-I have put together a [set of fun example](https://codepen.io/pbCodeSchool/full/Qpqvpp/) of things I typically animate. In that example you see I am animating a number of properties. All are triggered on hover of the .item class. Some do just one property animation and some do multiple property animations. What you choose to animate is entirely up to you and the situation you are in. We will focus on the "Where, When, and Why" of animation at a later date. 
+I have put together a [set of fun examples](https://codepen.io/pbCodeSchool/full/Qpqvpp/) of things that I typically animate. In that example you see I am animating a number of properties. All animations are triggered on the hover of the .item class. Some animate just one property and some animate multiple properties. What you choose to animate is entirely up to you and the situation you are in. We will focus on the "When, and Why" of animation at a later date.
 
 [^*]: I'm sure I am missing some items that cannot be animated, but I don't run into a whole bunch and the information is sparse out there.
 
 ### Triggering Animation
 
-We have two ways to trigger an animation in CSS. When the user hovers over an item or when a class changes on the element. 
+We have two ways to trigger an animation in CSS. When the user hovers over an item or when a class changes on the element.
 
-The hover state is trigger when the user mover the cursor over the bounding box on an element. The CSS pseudo class is then triggered and all the rules defined in that block are fired. 
+The hover state is trigger when the user mover the cursor over the bounding box on an element. The CSS pseudo class is then triggered and all the rules defined in that block are fired.
 
-A class change usually requires JavaScript. Basically, when a new class is added, or an old class is removed, this triggers an animation to run based on what was added or what the default state is. Depending on if the class was added or removed.
-
-We will be focusing on the hover trigger for this lecture.
+A class change requires JavaScript. Basically JavaScript adds or removes a class. And based on that change, if the transition property is set, this will trigger an animation. Either to a new state, if the class was added. Or back to a default state, if the class was removed.
 
 ### Types of Animation
 
@@ -63,7 +61,7 @@ The `transition` property is what is triggering the animation and that takes min
 
 #### Animation and @Keyframes
 
-Animation and @Keyframes go hand in hand. The `animation` property is applied to your element. Then the `@keyframes` are defined outside a selector and hold the values of what you want to animate. 
+Animation and @Keyframes go hand in hand. The `animation` property is applied to your element. Then the `@keyframes` are defined outside a selector and hold the values of what you want to animate.
 
 Here is a break down of the CSS syntax for animate.
 
@@ -125,7 +123,7 @@ Let's see a real example and break everything down. [CodePen](https://codepen.io
 
 ## Example time
 
-Now that we have the prerequisites down we can move onto applying the knowledge to examples. 
+Now that we have the prerequisites down we can move onto applying the knowledge to examples.
 
 ### Starting off easy
 
@@ -143,7 +141,7 @@ Let's start with something easy. On hover, the box should grow in width and heig
 }
 ```
 
-Now, let's animate its width as well. 
+Now, let's animate its width as well.
 
 ```CSS
 .box{
@@ -174,13 +172,13 @@ Maybe you want to rotate it, because... you can.
 }
 ```
 
-I suggest you play around with the different properties, speeds, and eases to see what you can do. 
+I suggest you play around with the different properties, speeds, and eases to see what you can do.
 
 These examples are cool, but the are not really practical. Let's move onto something a little more useful.
 
 ### Somethin a little more useful
 
-Button hovers are an easy win when it comes to user experience. Just a subtle animation from one color to the other makes the site feel better. Let's look at what it would take to do that. 
+Button hovers are an easy win when it comes to user experience. Just a subtle animation from one color to the other makes the site feel better. Let's look at what it would take to do that.
 
 ```CSS
 .btn{
@@ -194,7 +192,7 @@ Button hovers are an easy win when it comes to user experience. Just a subtle an
 }
 ```
 
-That's pretty! Maybe we can add some box-shadow to help lift it off the page. 
+That's pretty! Maybe we can add some box-shadow to help lift it off the page.
 
 ```CSS
 .btn{
@@ -209,7 +207,7 @@ That's pretty! Maybe we can add some box-shadow to help lift it off the page.
 }
 ```
 
-Take the transition property off the `.btn` element. See what that looks like with out it. The transition makes it a much better experience. 
+Take the transition property off the `.btn` element. See what that looks like with out it. The transition makes it a much better experience.
 
 Buttons are cool, but what about something a little more complicated?
 
@@ -311,10 +309,10 @@ Next, we animate it.
 }
 ```
 
-Notice we have to trigger hover and then animate other elements. We will go more in depth with this in future lectures. 
+Notice we have to trigger hover and then animate other elements. We will go more in depth with this in future lectures.
 
 Cool resource for inspiration and markup required. [LittleSnippets.net](http://littlesnippets.net/)
 
 ## Conclusion
 
-Animation is all about experimentation. Everything in these examples are mean to be tweaked with. The point is to make the animation to enhance you user experience. If it doesn't feel "right" to you, chances are your users are going to be off put by it as well. Tweak everything until its just right. 
+Animation is all about experimentation. Everything in these examples are mean to be tweaked with. The point is to make the animation to enhance you user experience. If it doesn't feel "right" to you, chances are your users are going to be off put by it as well. Tweak everything until its just right.
