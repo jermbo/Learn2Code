@@ -1,17 +1,16 @@
 # Animation 202
 
-In this lesson we will be expanding on the previous session. Please familiarize yourself with (Animations 101)[https://github.com/pbcodeschool/Learn2Code/tree/master/CSSAnimations/animations-101] if you are not comfortable with the animation basics.
+In this lesson we will be expanding on the previous session. Please familiarize yourself with [Animations 101](https://github.com/pbcodeschool/Learn2Code/tree/master/CSSAnimations/animations-101) if you are not comfortable with the animation basics.
 
-Last session we talked about what animation is and how it can be applied to CSS elements. We talked about where to use it, what properties you can animate, as well as properties you cannot animate. We learned how to animate one property at a time and triggered on hover. In this session we will be taking those concepts a little further. We will be triggering multiple properties to animate as well as multiple items at the same time. Here is a (CodePen)[https://codepen.io/pbCodeSchool/pen/wdaNKR] of what we will be building in this session.
+Last session we talked about what animation is and how it can be applied to CSS elements. We talked about where to use it, what properties you can animate, as well as properties you cannot animate. We learned how to animate one property at a time and triggered on hover. In this session we will be taking those concepts a little further. We will be triggering multiple properties to animate as well as multiple items at the same time. Here is a [CodePen](https://codepen.io/pbCodeSchool/pen/wdaNKR) of what we will be building in this session.
 
 ##  Resources
 
 Before we go any further, I want to list out a few resources that you can use for inspiration in both style and code.
-* (CodePen.io)[http://codepen.io] - Use this place as inspiration and a learning tool. There are a lot of people posting their code and animations here, why not learn from it.
-* (Little Snippets)[http://littlesnippets.net/] - A place dedicated to CSS animation. They use CodePen as their platform for experimentation and they have curated lists of examples that you can use in your projects right away.
-* (Easing.net)[http://easings.net/] - Easing is a big part of any good animation. There are a limited number of built in easing functions in CSS, ease | ease-in | ease-out | ease-in-out. If these don't enhance your animations in just the right way, you can utilize cubic-bezier and supply your own ease. This resource gives you the numbers you need to accomplish different easing's.
-* (Motion & Meaning)[http://motionandmeaning.io/] - Animation should enhance the user experience. Here are some well thought out explanations of the principles of animation.
-
+* [CodePen.io](http://codepen.io) - Use this place as inspiration and a learning tool. There are a lot of people posting their code and animations here, why not learn from it.
+* [Little Snippets](http://littlesnippets.net/) - A place dedicated to CSS animation. They use CodePen as their platform for experimentation and they have curated lists of examples that you can use in your projects right away.
+* [Easing.net](http://easings.net/) - Easing is a big part of any good animation. There are a limited number of built in easing functions in CSS, ease | ease-in | ease-out | ease-in-out. If these don't enhance your animations in just the right way, you can utilize cubic-bezier and supply your own ease. This resource gives you the numbers you need to accomplish different easing's.
+* [Motion & Meaning](http://motionandmeaning.io/) - Animation should enhance the user experience. Here are some well thought out explanations of the principles of animation.
 
 ## Style 1
 
@@ -121,7 +120,7 @@ Now that we have the end result of what we want our animation to be, let's start
   background-color: rgba(0, 0, 0, 0.9);
 }
 ```
-Note the differences in the h3 and h5. Their opacity has been set to 0, and individual transform for positive and negative 100% on the translateY definition. The 'before' peusdo  element has now moved down to 100% top. This places it off the viewable area of the image.
+Note the differences in the h3 and h5. Their opacity has been set to 0, and individual transform for positive and negative 100% on the translateY definition. The 'before' pseudo element has now moved down to 100% top. This places it off the viewable area of the image.
 
 We have now set up the initial state of the effect. All we need to do is trigger hover to change the elements states. You can do that like so :
 
@@ -197,8 +196,4 @@ Now, save and refresh your page. Things should be animating as expected.
 
 ## Conclusion
 
-As stated in the last session, animation is all about experimentation. Take a look at the other examples displayed in the (CodePen)[http://codepen.io/pbCodeSchool/pen/wdaNKR] and pick the code apart. See what it's doing and play around with the variables. What can you change? Does it make sense as to why it is now animating that way? Play and have fun. One thing I would like to leave you with on this topic is; if the animation feels off to you it is probably wrong and feels off to your users too. Tweak the animation until it feels just right.
-
-
-
- 
+As stated in the last session, animation is all about experimentation. Take a look at the other examples displayed in the [CodePen](http://codepen.io/pbCodeSchool/pen/wdaNKR) and pick the code apart. See what it's doing and play around with the variables. What can you change? Does it make sense as to why it is now animating that way? Play and have fun. One thing I would like to leave you with on this topic is; if the animation feels off to you it is probably wrong and feels off to your users too. Tweak the animation until it feels just right.
