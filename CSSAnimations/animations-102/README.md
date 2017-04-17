@@ -198,3 +198,7 @@ Now, save and refresh your page. Things should be animating as expected.
 ## Conclusion
 
 As stated in the last session, animation is all about experimentation. Take a look at the other examples displayed in the (CodePen)[http://codepen.io/pbCodeSchool/pen/wdaNKR] and pick the code apart. See what it's doing and play around with the variables. What can you change? Does it make sense as to why it is now animating that way? Play and have fun. One thing I would like to leave you with on this topic is; if the animation feels off to you it is probably wrong and feels off to your users too. Tweak the animation until it feels just right.
+
+
+
+ 
